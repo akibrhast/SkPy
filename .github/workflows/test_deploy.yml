@@ -52,3 +52,11 @@ jobs:
           WITH_V: true
           PRERELEASE_SUFFIX: ${{ steps.extract_branch.outputs.branch }}
           DRY_RUN: true
+      
+      - name: log outputs
+        id: logOutputs
+        run: |
+          echo ${{github.ref}};
+          echo ${{ steps.extract_branch.outputs.branch }};
+          echo ${{ steps.version.outputs.tag }}
+          echo ${{ steps.env.outputs.tag }}
