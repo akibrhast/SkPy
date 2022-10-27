@@ -15,6 +15,7 @@ import requests
 from .core import SkypeObj, SkypeEnum, SkypeApiException, SkypeAuthException
 
 # some comments
+# test pr3 not deleting branch
 class SkypeConnection(SkypeObj):
     """
     The main connection class -- handles all requests to API resources.
