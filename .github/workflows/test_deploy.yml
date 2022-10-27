@@ -51,6 +51,7 @@ jobs:
           RELEASE_BRANCHES: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WITH_V: true
+          DRY_RUN: true
           PRERELEASE_SUFFIX: ${{ steps.extract_branch.outputs.branch }}
       
       - name: log outputs
