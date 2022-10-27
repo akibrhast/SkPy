@@ -49,7 +49,6 @@ jobs:
         id: version
         env:
           RELEASE_BRANCHES: production
-          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           WITH_V: true
           PRERELEASE_SUFFIX: ${{ steps.extract_branch.outputs.branch }}
           DRY_RUN: true
