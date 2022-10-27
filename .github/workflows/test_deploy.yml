@@ -28,12 +28,12 @@ jobs:
         run: |
           echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"; 
           echo ${{github.ref}};
-          echo ${{ steps.extract_branch.outputs.branch }};
         id: extract_branch
       
       - name: 'Get Environment'
         id: env
         run: |
+          echo ${{ steps.extract_branch.outputs.branch }};
           if [[ "${{ steps.extract_branch.outputs.branch }}" == "production" ]]; then
             echo "::set-output name=tag::prd"
             echo "::set-output name=environment::production"
