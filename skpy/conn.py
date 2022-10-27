@@ -14,7 +14,7 @@ import requests
 
 from .core import SkypeObj, SkypeEnum, SkypeApiException, SkypeAuthException
 
-
+# some comments
 class SkypeConnection(SkypeObj):
     """
     The main connection class -- handles all requests to API resources.
