@@ -49,6 +49,7 @@ jobs:
         id: version
         env:
           RELEASE_BRANCHES: master
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WITH_V: true
           PRERELEASE_SUFFIX: ${{ steps.extract_branch.outputs.branch }}
       
